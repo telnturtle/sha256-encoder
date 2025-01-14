@@ -44,3 +44,10 @@ const handlers = {
 for (const [key, handler] of Object.entries(handlers)) {
   document.getElementById(key).addEventListener('click', handler)
 }
+
+const handleKeydownInput = (event) => {
+  if (event.key === 'Enter') {
+    handleClickEncode()
+  }
+}
+document.getElementById('input').addEventListener('keydown', handleKeydownInput)
